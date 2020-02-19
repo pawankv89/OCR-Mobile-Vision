@@ -1,20 +1,10 @@
-# OCR-Mobile-Vision
-
-
-## A Native iOS Text recognition app, converts "Image To Text" using Mobile-Vision Framework.
-
-
-Added Some screens here.
-
-![](https://github.com/pawankv89/OCR-Mobile-Vision/blob/master/images/screen_1.png)
-
-
-## Usage
-
-#### Controller
-
-```swift
-
+//
+//  ViewController.swift
+//  OCR-Mobile-Vision
+//
+//  Created by Pawan kumar on 24/01/20.
+//  Copyright © 2020 Pawan Kumar. All rights reserved.
+//
 
 import UIKit
 import GoogleMobileVision
@@ -143,21 +133,3 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         print("readItem:- ", readItem)
     }
 }
-
-
-```
-
-## Requirements
-
-### Build
-
-Xcode Version 11.3 (11C29), iOS 13.2.0 SDK
-
-## License
-
-This code is distributed under the terms and conditions of the [MIT license](LICENSE).
-
-## Change-log
-
-A brief summary of each this release can be found in the [CHANGELOG](CHANGELOG.mdown). 
-

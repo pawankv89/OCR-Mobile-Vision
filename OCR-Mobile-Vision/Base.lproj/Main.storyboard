@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2F6-mB-DWv">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="eAJ-ha-DQf">
+            <objects>
+                <viewController id="2F6-mB-DWv" customClass="ViewController" customModule="OCR_Mobile_Vision" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4Bt-fy-JaL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Oel-K8-V9d">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Oel-K8-V9d" secondAttribute="height" multiplier="1:1" id="Nn0-3d-iqE"/>
+                                </constraints>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ejO-SH-LqS">
+                                <rect key="frame" x="0.0" y="320" width="320" height="248"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="2F6-mB-DWv" id="Kkq-Mh-DHM"/>
+                                    <outlet property="delegate" destination="2F6-mB-DWv" id="O4t-ek-pJX"/>
+                                </connections>
+                            </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="q1A-px-ETz">
+                                <rect key="frame" x="150" y="150" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="q1A-px-ETz" firstAttribute="centerY" secondItem="Oel-K8-V9d" secondAttribute="centerY" id="3hg-4v-ykR"/>
+                            <constraint firstItem="Oel-K8-V9d" firstAttribute="trailing" secondItem="A1j-K5-RsA" secondAttribute="trailing" id="5D4-Ea-apq"/>
+                            <constraint firstItem="ejO-SH-LqS" firstAttribute="bottom" secondItem="A1j-K5-RsA" secondAttribute="bottom" id="A6a-1h-0re"/>
+                            <constraint firstItem="Oel-K8-V9d" firstAttribute="leading" secondItem="A1j-K5-RsA" secondAttribute="leading" id="JN7-mk-epj"/>
+                            <constraint firstItem="ejO-SH-LqS" firstAttribute="top" secondItem="Oel-K8-V9d" secondAttribute="bottom" id="RkH-mN-LEO"/>
+                            <constraint firstItem="ejO-SH-LqS" firstAttribute="leading" secondItem="A1j-K5-RsA" secondAttribute="leading" id="dIP-L8-n9l"/>
+                            <constraint firstItem="ejO-SH-LqS" firstAttribute="trailing" secondItem="A1j-K5-RsA" secondAttribute="trailing" id="jNL-7Z-lyj"/>
+                            <constraint firstItem="q1A-px-ETz" firstAttribute="centerX" secondItem="Oel-K8-V9d" secondAttribute="centerX" id="oez-FZ-qgU"/>
+                            <constraint firstItem="Oel-K8-V9d" firstAttribute="top" secondItem="A1j-K5-RsA" secondAttribute="top" id="rgp-hv-Nc1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="A1j-K5-RsA"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicatorView" destination="q1A-px-ETz" id="wkl-K6-DAl"/>
+                        <outlet property="chooseImageView" destination="Oel-K8-V9d" id="v8i-Pi-JJS"/>
+                        <outlet property="tableView" destination="ejO-SH-LqS" id="SWb-YA-d0p"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fkc-uz-aeb" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.75" y="118.30985915492958"/>
+        </scene>
+    </scenes>
+</document>
